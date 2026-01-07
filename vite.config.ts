@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      base: '/', // مهم جداً للـ Netlify لو المشروع على root domain
       server: {
         port: 3000,
         host: '0.0.0.0',
